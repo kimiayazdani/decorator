@@ -4,41 +4,61 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class PowerTests {
 
-//    @Test
-//    void PowerRec_standard(){
-//        Power test = new Power(new PowerRec());
-//        assertEquals(36, test.calculate(6, 2));
-//
-//    }
-//
-//    @Test
-//    void PowerRec_Firstzero(){
-//        Power test = new Power(new PowerRec());
-//        assertEquals(0, test.calculate(0, 2));
-//    }
-//
-//    @Test
-//    void PowerRec_SecondZero(){
-//        Power test = new Power(new PowerRec());
-//        assertEquals(1, test.calculate(6, 0));
-//    }
-
     @Test
-    void PowerLoop_standard(){
-        Power test = new Power(new PowerLoop());
+    void PowerRec_MultRec_standard(){
+        Power test = new Power(new PowerRec(), new Multiply(new MultRec()));
         assertEquals(36, test.calculate(6, 2));
 
     }
 
     @Test
-    void PowerLoop_Firstzero(){
-        Power test = new Power(new PowerLoop());
-        assertEquals(0, test.calculate(0, 2));
+    void PowerRec_MultLoop_standard(){
+        Power test = new Power(new PowerRec(), new Multiply(new MultLoop()));
+        assertEquals(36, test.calculate(6, 2));
+
+    }
+
+
+    @Test
+    void PowerLoop_MultRec_standard(){
+        Power test = new Power(new PowerLoop(), new Multiply(new MultRec()));
+        assertEquals(36, test.calculate(6, 2));
+
     }
 
     @Test
-    void PowerLoop_SecondZero(){
-        Power test = new Power(new PowerLoop());
-        assertEquals(1, test.calculate(6, 0));
+    void PowerLoop_MultLoop_standard(){
+        Power test = new Power(new PowerLoop(), new Multiply(new MultLoop()));
+        assertEquals(36, test.calculate(6, 2));
+
     }
+    @Test
+    void PowerRec_MultRec_SecondZero(){
+        Power test = new Power(new PowerRec(), new Multiply(new MultRec()));
+        assertEquals(1, test.calculate(6, 0));
+
+    }
+
+    @Test
+    void PowerRec_MultLoop_SecondZero(){
+        Power test = new Power(new PowerRec(), new Multiply(new MultLoop()));
+        assertEquals(1, test.calculate(6, 0));
+
+    }
+
+
+    @Test
+    void PowerLoop_MultRec_SecondZero(){
+        Power test = new Power(new PowerLoop(), new Multiply(new MultRec()));
+        assertEquals(1, test.calculate(6, 0));
+
+    }
+
+    @Test
+    void PowerLoop_MultLoop_SecondZero(){
+        Power test = new Power(new PowerLoop(), new Multiply(new MultLoop()));
+        assertEquals(1, test.calculate(6, 0));
+
+    }
+
 }

@@ -10,7 +10,7 @@ public class PowerRec implements PowerCalculator{
 			return 1;
 		}
 
-		return multiplier.calculate(first, calculate(first, second-1));
+		return multiplier.calculate(first, calculate(first, second-1, multiplier));
 
 	}
 }
