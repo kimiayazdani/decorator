@@ -7,7 +7,7 @@ public class Mocha extends Flavour {
 
 	@Override
 	public String getDescription() {
-		return this.beverage.getDescription() + " with mocha";;
+		return this.beverage.getDescription() + " with mocha";
 	}
 
 	@Override
