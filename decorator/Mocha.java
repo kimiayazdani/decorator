@@ -6,6 +6,10 @@ public class Mocha extends Flavour {
 		this.description = this.beverage.getDescription() + " with mocha";
 	}
 
+	@Override
+	public String getDescription() {
+		return this.description;
+	}
 
 	@Override
 	public double cost() {
