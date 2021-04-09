@@ -1,5 +1,5 @@
 public class Decaf extends Beverage{
-    public HouseBlend(){
+    public Decaf(){
         this.description = "Delicious Decaf";
     }
 
