@@ -1,4 +1,4 @@
-abstract class Multiply {
+public class Multiply {
 	private Multiplier multiplier;
 
 	public Multiply(Multiplier multiplier) {
