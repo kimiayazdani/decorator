@@ -3,12 +3,11 @@ public class Mocha extends Flavour {
 
 	public Mocha(Beverage beverage) {
 		this.beverage = beverage;
-		this.description = this.beverage.getDescription() + " with mocha";
 	}
 
 	@Override
 	public String getDescription() {
-		return this.description;
+		return this.beverage.getDescription() + " with mocha";;
 	}
 
 	@Override
